@@ -1,0 +1,266 @@
+:root {
+  --warna: rgba(255, 215, 0, 1);
+}
+
+* {
+  text-decoration: none;
+  outline-style: none;
+  color: white;
+  font-family: "Ysabeau", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 500px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+  background-color: black;
+  border-bottom: 3px solid var(--coklat);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  font-family: "Pacifico", cursive;
+  border-bottom: 3px solid var(--warna);
+}
+
+.navbar .brand-name {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-left: 30px;
+  transition: 0.5s;
+  font-style: italic;
+}
+
+.navbar:hover .brand-name {
+  color: var(--warna);
+}
+
+.navbar .brand-name span {
+  font-weight: 800;
+  color: var(--warna);
+  text-shadow: 2px 1px 10px var(--warna);
+}
+
+.navbar .list-item {
+  display: flex;
+}
+
+.navbar .list-item a {
+  margin: 1.5rem;
+  transition: 0.5s;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.navbar .list-item a:hover {
+  color: var(--warna);
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.9);
+}
+
+.navbar .list-item a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--warna);
+  transform: scaleX(0);
+  transition: 0.2s ease-in-out;
+}
+
+.navbar .list-item a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra {
+  margin-right: 1rem;
+}
+
+.navbar .navbar-extra a {
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+
+#hamburger {
+  display: none;
+}
+
+.content {
+  margin-top: 13rem;
+  display: flex;
+  min-width: 100%;
+}
+
+.content .main-text {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7rem;
+  line-height: 0rem;
+}
+
+.main-text h3 {
+  color: var(--warna);
+  font-size: 2rem;
+}
+
+.main-text h1 {
+  color: var(--warna);
+  font-size: 4rem;
+}
+
+.main-text p {
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.main-text .link {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-text .link a {
+  color: black;
+  box-sizing: border-box;
+  background-color: var(--warna);
+  padding: 9px 25px;
+  border: 3px var(--warna) solid;
+  border-radius: 30px;
+  font-weight: bolder;
+  line-height: 0.2rem;
+  font-size: larger;
+}
+.main-text .link a:hover {
+  transform: scale(1.2);
+  border: white 2px solid;
+  background: transparent;
+  color: white;
+  transition: 0.4s;
+}
+.image {
+  position: absolute;
+  right: 200px;
+  top: 100px;
+}
+
+.image img {
+  width: 23rem;
+  height: 25rem;
+  object-fit: contain;
+}
+.main-text link a .jumbotron {
+  margin-top: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 20rem;
+  line-height: 0rem;
+}
+
+.information-page {
+  height: auto;
+  width: auto;
+  background-color: var(--warna);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.information-page .short-explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 20rem;
+  line-height: 1rem;
+  padding: 2rem;
+}
+
+.information-page .short-explanation p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.leader {
+  border-left: 3px red solid;
+  padding: 2rem;
+}
+.leader .explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+}
+.leader .explanation > h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.leader .explanation .p p {
+  font-size: 1.2rem;
+  text-indent: 5rem;
+  line-height: 1.7rem;
+}
+
+.sm {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.sm a {
+  padding: 0rem 0.5rem;
+}
+/* Media Queries */
+
+/* desktop */
+
+@media (max-width: 992px) {
+  html {
+    font-size: 77%;
+  }
+}
+
+/* tablet & HP */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  .navbar .list-item {
+    display: none;
+  }
+
+  .navbar {
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  #hamburger {
+    display: inline-block;
+  }
+
+  .navbar .list-item {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+  }
+
+  .navbar .list-item.active {
+    right: 0;
+  }
+}

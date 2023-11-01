@@ -1,0 +1,8 @@
+const coba = {
+  nama: "'Abdul 'Aziz",
+  alamat: "Jambi",
+};
+
+for (const value of coba) {
+  
+}

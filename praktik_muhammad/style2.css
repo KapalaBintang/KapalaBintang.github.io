@@ -1,0 +1,25 @@
+:root {
+  --biru: rgb(66, 108, 245);
+  --warna: rgba(255, 215, 0, 1);
+}
+
+* {
+  text-decoration: none;
+  outline-style: none;
+  font-family: "Pacifico", cursive;
+  color: var(--warna);
+}
+
+body {
+  background-color: black;
+  color: var(--warna);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container h3 {
+  text-align: center;
+}

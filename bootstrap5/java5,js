@@ -1,0 +1,19 @@
+//  (object)
+function Mahasiswa(nama, alamat) {
+  this.nama = nama;
+  this.alamat = alamat;
+}
+
+var mahs = new Mahasiswa("Yunus", "Jambi");
+
+// Declaration (object)
+function Mahasiswa2(nama, alamat) {
+  var ini = [];
+  ini.nama = nama;
+  ini.alamat = alamat;
+  return ini;
+}
+
+var mahs2 = Mahasiswa2("Akbar", "Jambi");
+
+// lupa
